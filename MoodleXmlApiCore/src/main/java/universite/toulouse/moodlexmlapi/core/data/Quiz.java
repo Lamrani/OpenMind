@@ -1,4 +1,4 @@
-package universite.toulouse.moodlexmlapi.core;
+package universite.toulouse.moodlexmlapi.core.data;
 
 import java.util.List;
 
