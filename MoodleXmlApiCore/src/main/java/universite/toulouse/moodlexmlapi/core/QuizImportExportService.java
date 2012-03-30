@@ -18,7 +18,7 @@ public interface QuizImportExportService {
 	 * @param is the input stream containing the quiz in Moodle XML format 
 	 * @return the imported quiz
 	 */
-	public ImportedQuiz importQuiz(InputStream is);
+	public ImportedQuiz importQuiz(InputStream is) throws InvalidQuizFormatException, InvalidStreamSizeException;
 	
 	/**
 	 * Export a quiz in the Moodle XML format
