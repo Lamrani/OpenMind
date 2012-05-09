@@ -10,7 +10,7 @@ import universite.toulouse.moodlexmlapi.core.data.Quiz;
 
 public class QuizManager implements ImportedQuiz, Quiz {
 
-	private Document document;
+	public static Document DOCUMENT;
 	
 	/**
 	 * Constructor
@@ -18,7 +18,7 @@ public class QuizManager implements ImportedQuiz, Quiz {
 	 */
 	public QuizManager(Document document) {
 		
-		this.document = document;
+		this.DOCUMENT = document;
 	}
 
 	public List<Question> getQuestionList() {
