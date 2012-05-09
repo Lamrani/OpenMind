@@ -57,6 +57,12 @@ public class DomManager {
 		}
 	}
 	
+	/**
+	 * 
+	 * @param element
+	 * @return
+	 * @throws InvalidQuizFormatException
+	 */
 	public static String getElementValue(Element element) throws InvalidQuizFormatException{
 		if(element != null){
 			return element.getText();
@@ -65,6 +71,13 @@ public class DomManager {
 		}
 	}
 	
+	/**
+	 * 
+	 * @param element
+	 * @param attributName
+	 * @return
+	 * @throws InvalidQuizFormatException
+	 */
 	public static String getAttributtValue(Element element, String attributName) throws InvalidQuizFormatException{
 		
 		if(element != null && attributName != null && attributName.length() != 0){
