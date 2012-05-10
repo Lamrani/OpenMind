@@ -14,7 +14,6 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
         // Create a singleton
         Singleton xml = Singleton.getInstance();
         // Obtains a document instance

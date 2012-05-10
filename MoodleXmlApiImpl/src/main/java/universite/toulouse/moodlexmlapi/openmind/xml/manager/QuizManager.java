@@ -36,8 +36,10 @@ public class QuizManager implements ImportedQuiz, Quiz {
 			quizElement = DomAccess.getRootElement("quiz");
 			List<Element> questionsList = DomAccess.getListElement(quizElement, "question");
 			for(int i = 0; i < questionsList.size(); i++){
-				Question question = CategoryQuestionAccess.getCategoryQuestion(questionsList.get(i));
-			    if(QuestionType.category.equals(question.getQuestionType().toString())){
+				String type = DomAccess.getAttributtValue(questionsList.get(i), "type");
+				Question question = null;
+			    if(QuestionType.category.equals(type)){
+			    	question = CategoryQuestionAccess.getCategoryQuestion(questionsList.get(i));
 			    	questionList.add(question);
 			    }else{
 			    	question = GenericQuestionAccess.getGenericQuestion(questionsList.get(i));
@@ -45,10 +47,8 @@ public class QuizManager implements ImportedQuiz, Quiz {
 			    }
 			}
 		} catch (InvalidQuizFormatException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 		return questionList;
 	}
 
