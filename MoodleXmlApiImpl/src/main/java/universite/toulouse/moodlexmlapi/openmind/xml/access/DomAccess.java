@@ -48,13 +48,15 @@ public class DomAccess {
 	 * @return
 	 * @throws InvalidQuizFormatException 
 	 */
-	public static List getListElement(Element element, String elementName) throws InvalidQuizFormatException{
+	public static List<Element> getListElement(Element element, String elementName) throws InvalidQuizFormatException{
 		
+		List<Element> elementList; 
 		if(element != null && elementName != null && elementName.length() != 0){
-			return element.getChildren(elementName);
+			elementList = element.getChildren(elementName);
 		}else{
 			throw new InvalidQuizFormatException(new JDOMException());
 		}
+		return elementList;
 	}
 	
 	/**
