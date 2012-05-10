@@ -54,7 +54,18 @@ public class QuizManager implements ImportedQuiz, Quiz {
 
 	public List<Question> getProcessedQuestionList() {
 		// TODO Auto-generated method stub
-		return null;
+		Element quizElement = null;
+		List questions = null;
+		try {
+			quizElement = DomAccess.getRootElement("quiz");
+			questions = DomAccess.getListElement(quizElement, "question");
+		} catch (InvalidQuizFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		return questions ;
 	}
 
 	public List<Question> getExtractedQuestionList() {
