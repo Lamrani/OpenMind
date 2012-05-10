@@ -28,6 +28,11 @@ public class QuizManager implements ImportedQuiz, Quiz {
 
 	public int getProcessedQuestionCount() {
 		// TODO Auto-generated method stub
+		
+		
+		
+		
+		
 		return 0;
 	}
 
