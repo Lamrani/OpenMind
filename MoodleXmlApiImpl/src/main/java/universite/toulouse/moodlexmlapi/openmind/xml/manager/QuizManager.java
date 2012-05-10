@@ -30,7 +30,6 @@ public class QuizManager implements ImportedQuiz, Quiz {
 	}
 
 	public int getProcessedQuestionCount() {
-		
 		Element quizElement = null;
 		List questions = null;
 		try {
