@@ -25,7 +25,7 @@ public class QuizManager implements ImportedQuiz, Quiz {
 	}
 
 	public List<Question> getQuestionList() {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 
