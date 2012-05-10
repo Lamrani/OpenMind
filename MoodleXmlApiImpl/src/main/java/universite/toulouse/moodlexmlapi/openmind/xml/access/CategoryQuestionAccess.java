@@ -6,12 +6,11 @@ import org.jdom.Element;
 import universite.toulouse.moodlexmlapi.core.InvalidQuizFormatException;
 import universite.toulouse.moodlexmlapi.core.data.CategoryQuestion;
 import universite.toulouse.moodlexmlapi.core.data.QuestionType;
-import universite.toulouse.moodlexmlapi.openmind.xml.manager.DomManager;
 
 public class CategoryQuestionAccess {
 	
 	/**
-	 * 
+	 * Get a category of question and course value
 	 * @return an instance of category question
 	 */
 	public static CategoryQuestion getCategoryQuestion(){
@@ -19,17 +18,17 @@ public class CategoryQuestionAccess {
 		CategoryQuestion categoryQuestion = new CategoryQuestion();
 		
 		try {
-			Element quizElement = DomManager.getRootElement("quiz");
-			Element questionElement = DomManager.getElement(quizElement, "question");
-			String typeElement =  DomManager.getAttributtValue(questionElement, "type");
+			Element quizElement = DomAccess.getRootElement("quiz");
+			Element questionElement = DomAccess.getElement(quizElement, "question");
+			String typeElement =  DomAccess.getAttributtValue(questionElement, "type");
 			// Checking and add a value of type
 			if(QuestionType.values().equals(typeElement)){
 				categoryQuestion.setCategory(typeElement);
 			}
-			Element categoryElement = DomManager.getElement(questionElement, "category");
-			Element textElement = DomManager.getElement(categoryElement, "text");
+			Element categoryElement = DomAccess.getElement(questionElement, "category");
+			Element textElement = DomAccess.getElement(categoryElement, "text");
 			// Add a value of course
-			String course =  DomManager.getElementValue(textElement);
+			String course =  DomAccess.getElementValue(textElement);
 			categoryQuestion.setCourse(course);
 		} catch (InvalidQuizFormatException e) {
 			e.printStackTrace();
