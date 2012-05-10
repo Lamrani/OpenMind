@@ -21,7 +21,7 @@ public class QuizManager implements ImportedQuiz, Quiz {
 	 */
 	public QuizManager(Document document) {
 		
-		this.DOCUMENT = document;
+		QuizManager.DOCUMENT = document;
 	}
 
 	public List<Question> getQuestionList() {

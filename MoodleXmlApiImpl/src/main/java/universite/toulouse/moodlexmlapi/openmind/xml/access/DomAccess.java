@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.jdom.Element;
 import org.jdom.JDOMException;
-import org.w3c.dom.DOMException;
 
 import universite.toulouse.moodlexmlapi.core.InvalidQuizFormatException;
 import universite.toulouse.moodlexmlapi.openmind.xml.manager.QuizManager;
