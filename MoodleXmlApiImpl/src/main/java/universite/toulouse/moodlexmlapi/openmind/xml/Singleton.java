@@ -51,9 +51,9 @@ public class Singleton {
 						}
 					}
 				} catch (JDOMException e) {
-					System.err.println("OpenMind cannot build quiz.xml, please respect xml format");
+					System.err.println("OpenMind cannot build "+nameFile+", please respect xml format");
 				} catch (IOException e) {
-					System.err.println("OpenMind cannot found quiz.xml");
+					System.err.println("OpenMind cannot found "+nameFile);
 				} 
 			}else{
 				System.err.println("Quiz.xml is not defined in repository");
