@@ -9,7 +9,7 @@ import universite.toulouse.moodlexmlapi.core.data.QuestionType;
 import universite.toulouse.moodlexmlapi.core.data.QuestionTextFormat;
 import universite.toulouse.moodlexmlapi.openmind.xml.GenericQuestionEntity;
 
-public class GenericQuestionAccess {
+public class GenericQuestionAccess extends QuestionAccess {
 
 	/**
 	 * Get a category of question and course value
