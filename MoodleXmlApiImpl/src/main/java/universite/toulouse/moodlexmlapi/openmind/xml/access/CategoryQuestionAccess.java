@@ -13,13 +13,11 @@ public class CategoryQuestionAccess {
 	 * Get a category of question and course value
 	 * @return an instance of category question
 	 */
-	public static CategoryQuestion getCategoryQuestion(){
+	public static CategoryQuestion getCategoryQuestion(Element questionElement){
 		
 		CategoryQuestion categoryQuestion = new CategoryQuestion();
 		
 		try {
-			Element quizElement = DomAccess.getRootElement("quiz");
-			Element questionElement = DomAccess.getElement(quizElement, "question");
 			String typeElement =  DomAccess.getAttributtValue(questionElement, "type");
 			// Checking and add a value of type
 			if(QuestionType.values().equals(typeElement)){

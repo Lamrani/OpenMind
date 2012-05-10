@@ -26,6 +26,10 @@ public class QuizManager implements ImportedQuiz, Quiz {
 
 	public List<Question> getQuestionList() {
 		
+		List<Question> questionList;
+		for(int i = 0; i < getProcessedQuestionCount(); i++){
+			Question question = 
+		}
 		return null;
 	}
 

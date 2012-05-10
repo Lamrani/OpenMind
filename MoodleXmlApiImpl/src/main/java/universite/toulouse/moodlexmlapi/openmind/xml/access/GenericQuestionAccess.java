@@ -15,13 +15,11 @@ public class GenericQuestionAccess {
 	 * Get a category of question and course value
 	 * @return an instance of category question
 	 */
-	public static GenericQuestion getGenericQuestion(){
+	public static GenericQuestion getGenericQuestion(Element questionElement){
 		
 		GenericQuestion genericQuestion = new GenericQuestionEntity();
 		
 		try {
-			Element quizElement = DomAccess.getRootElement("quiz");
-			Element questionElement = DomAccess.getElement(quizElement, "question");
 			
 			/*
 			 * Type properties
